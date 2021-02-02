@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<title>수강정보 - 내강의실 | 2310</title>
+	<?php include './include/head.html' ?>
+</head>
+<body>
+	<!-- skipToContent -->
+	<div id="skipToContent">
+		<a href="#Container">본문으로 바로가기</a>
+		<a href="#MainGnb">메뉴 바로가기</a>
+	</div>
+	<!-- //skipToContent -->
+
+	<div class="loading" id="loading"><div class="img"><span class="skip">Loading...</span></div></div>
+	<div class="Layout__Allwrap" id="LayoutAllwrap">
+		<!-- Layout__header -->
+		<div class="Layout__header">
+			<?php include './include/header.html'; ?>
+		</div>
+		<!-- //Layout__header -->
+		
+		<!-- Layout__container -->
+		<div class="Layout__container">
+			<div class="Container" id="Container">
+				
+				<div class="SubContent">
+					<div class="Layout__section small">
+						<!-- 탭 -->
+						<div class="TabArea">
+							<div class="TabArea__item">
+								<a href="./9_1.html"><span>수강중강좌</span></a>
+							</div>
+							<div class="TabArea__item active">
+								<a href="./9_3.html"><span>수강정보</span></a>
+							</div>
+							<div class="TabArea__item">
+								<a href="./9_4.html"><span>1:1문의내역</span></a>
+							</div>
+						</div>
+						<!-- 탭 -->
+						<div class="pt40"></div>
+						<h1 class="SubContent__title2 center"><span>수강정보</span></h1>
+						<div class="pt30"></div>
+						<!-- 진행중 강좌 -->
+						<div class="BoardTable">
+							<div class="BoardTable__info clearfix">
+								<div class="title"><span>진행중 강좌</span></div>
+								<div class="order">
+									<select name="" id="" width="10">
+										<option value="">진행중 강좌</option>
+									</select>
+								</div>
+							</div>
+							<div class="pt10"></div>
+							<div class="BoardTable__basic center">
+								<table>
+									<colgroup>
+										<col class="col_subject" />
+										<col class="col_date" />
+										<col class="col_num" />
+										<col class="col_num" />
+										<col class="col_rate" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">강좌명</th>
+											<th scope="col">이용기간</th>
+											<th scope="col">남은기간</th>
+											<th scope="col">출석일수</th>
+											<th scope="col">평점</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><a href="#" class="link">키보드 - Chord Vocabulary</a></td>
+											<td>2020-09-01 ~ 2021-08-31</td>
+											<td>360</td>
+											<td>5</td>
+											<td>
+												<select name="" id="" width="5">
+													<option value="">1</option>
+												</select>
+											</td>
+										</tr>
+										<!-- <tr>
+											<td colspan="5" class="empty">NO DATA</td>
+										</tr> -->
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="pt20"></div>
+						<div class="ButtonArea center">
+							<a href="" class="btn_basic"><span>확인</span></a>
+						</div>
+						<!-- //진행중 강좌 -->
+						<div class="pt50"></div>
+						<!-- 완료 강좌 -->
+						<div class="BoardTable">
+							<div class="BoardTable__info clearfix">
+								<div class="title"><span>완료 강좌</span></div>
+							</div>
+							<div class="pt10"></div>
+							<div class="BoardTable__basic center">
+								<table>
+									<colgroup>
+										<col class="col_subject" />
+										<col class="col_date" />
+										<col class="col_num" />
+										<col class="col_num" />
+										<col class="col_rate" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">강좌명</th>
+											<th scope="col">이용기간</th>
+											<th scope="col">남은기간</th>
+											<th scope="col">출석일수</th>
+											<th scope="col">평점</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><a href="#" class="link">키보드 - Chord Vocabulary</a></td>
+											<td>2020-09-01 ~ 2021-08-31</td>
+											<td>360</td>
+											<td>5</td>
+											<td>★ ★ ★ ★</td>
+										</tr>
+										<tr>
+											<td><a href="#" class="link">패키지 - Advanced Package</a></td>
+											<td>2020-09-01 ~ 2021-08-31</td>
+											<td>360</td>
+											<td>5</td>
+											<td>★ ★ ★ ★</td>
+										</tr>
+										<!-- <tr>
+											<td colspan="5" class="empty">NO DATA</td>
+										</tr> -->
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!-- //완료 강좌 -->
+						<div class="pt20"></div>
+					</div>
+				</div>
+			</div>			
+		</div>
+		<!-- //Layout__container -->
+
+		<!-- Layout__footer -->
+		<div class="Layout__footer">
+			<?php include './include/footer.html'; ?>
+		</div>
+		<!-- //Layout__footer -->
+
+		<div class="Layout__fixed">
+			<a href="" class="link_talk"><span></span></a>
+		</div>
+	</div>
+</body>
+</html>

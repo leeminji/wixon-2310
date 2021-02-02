@@ -1,0 +1,5 @@
+background: rgb(169,41,213);
+background: -moz-linear-gradient(90deg, rgba(169,41,213,1) 0%, rgba(105,73,236,1) 19%, rgba(85,83,243,1) 42%, rgba(251,0,183,1) 90%);
+background: -webkit-linear-gradient(90deg, rgba(169,41,213,1) 0%, rgba(105,73,236,1) 19%, rgba(85,83,243,1) 42%, rgba(251,0,183,1) 90%);
+background: linear-gradient(90deg, rgba(169,41,213,1) 0%, rgba(105,73,236,1) 19%, rgba(85,83,243,1) 42%, rgba(251,0,183,1) 90%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a929d5",endColorstr="#fb00b7",GradientType=1);
