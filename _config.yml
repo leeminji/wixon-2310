@@ -1,1 +1,4 @@
-theme: jekyll-theme-cayman
+theme: jekyll-theme-slate
+
+url: "https://leeminji.github.io" # the base hostname & protocol for your site, e.g. https://example.github.io
+baseurl: "/wixon-2310" # the subpath of your site, e.g. /blog
