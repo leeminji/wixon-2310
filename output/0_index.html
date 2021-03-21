@@ -139,18 +139,65 @@
         <!-- Layout__container -->
         <div class="Layout__container">
             <div class="Container" id="Container">
-                <section class="VisualArea swiper-container" id="VisualArea">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="../_public/images/main/visual_img_1.png" alt=""></div>
-                        <div class="swiper-slide"><img src="../_public/images/main/visual_img_2.png" alt=""></div>
-                        <div class="swiper-slide"><img src="../_public/images/main/visual_img_3.png" alt=""></div>
+                <!-- MainVisualArea 메인비쥬얼 -->
+                <div class="MainVisualArea">
+                    <h2 class="skip">메인비쥬얼</h2>
+                    <div class="MainVisual__inner">
+                        <ul id="MainVisual" class="MainVisual">
+                            <li class="MainVisual__item item_1">
+                                <div class="img"></div>
+                            </li>
+                            <li class="MainVisual__item item_2">
+                                <div class="img"></div>
+                            </li>
+                            <li class="MainVisual__item item_3">
+                                <div class="img"></div>
+                            </li>
+                        </ul>
                     </div>
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination"></div>
-                </section>
+                </div>
+                <!-- //MainVisualArea 메인비쥬얼 -->
                 <div class="MainContent__area">
                     <section class="MainContent">
-                        <div class="Layout__section MainContent__inner">
+                        <div class="imgArea center">
+                            <img src="../_public/images/main/main_1.jpg" alt="">
+                        </div>
+                        <div class="imgArea center">
+                            <img src="../_public/images/main/main_2.jpg" alt="">
+                        </div>
+                        <div class="imgArea center">
+                            <img src="../_public/images/main/main_3.jpg" alt="">
+                        </div>
+                        <div class="FeatureClass" id="FeatureClass">
+                            <div class="FeatureClass__list">
+                                <div class="FeatureClass__title"><span>클래스</span></div>
+                                <a href="#ClassImg1" class="FeatureClass__item">
+                                    <span class="title">같은 시작, 다른 출발선</span>
+                                    <span class="cate">2310반주법</span>
+                                </a>
+                                <a href="#ClassImg2" class="FeatureClass__item">
+                                    <span class="title">건반의 힘, 즉흥반주의 신</span>
+                                    <span class="cate">2310반주법</span>
+                                </a>
+                                <a href="#ClassImg3" class="FeatureClass__item">
+                                    <span class="title">관점의 전환, 새로운 솔루션</span>
+                                    <span class="cate">2310반주법</span>
+                                </a>
+                            </div>
+                            <div class="FeatureClass__imgArea">
+                                <div class="FeatureClass__img" id="ClassImg1">
+                                    <img src="../_public/images/content/feature/class_img_1.png" alt="">
+                                </div>
+                                <div class="FeatureClass__img" id="ClassImg2">
+                                    <img src="../_public/images/content/feature/class_img_2.png" alt="">
+                                </div>
+                                <div class="FeatureClass__img" id="ClassImg3">
+                                    <img src="../_public/images/content/feature/class_img_3.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="Layout__section">
                             <div class="MainContent__title">
                                 <h1 class="title"><span>2310반주법</span></h1>
                                 <h2 class="sub_title"><span>효과적인 교회 예배의 시작 , <strong>2013 반주법</strong></span></h2>
@@ -1069,6 +1116,7 @@
                     </div>
                 </div>
             </div>
+            <script type="text/javascript" src="../_public/js/jquery.bxslider.js"></script>
             <script>
                 $(document).ready(function () {
                     UI.main();

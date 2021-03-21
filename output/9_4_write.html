@@ -176,13 +176,25 @@
 										</td>
 									</tr>
 									<tr>
-										<th scope="row">첨부파일</th>
+										<th scope="row">
+											<span>첨부파일</span>
+											<a href="#" class="icon small icon_add"><span class="skip">추가</span></a>
+										</th>
 										<td>
-											<div class="FileStyle">
-												<input type="file" name="wr_file" id="wr_file" />
-												<div class="file">
-													<input type="text" placeholder="첨부파일을 선택하세요." />
-													<label for="wr_file"><span>파일선택</span></label>
+											<div class="FileStyle__list">
+												<div class="FileStyle">
+													<input type="file" name="wr_file[]" id="wr_file1" />
+													<div class="file">
+														<input type="text" placeholder="첨부파일을 선택하세요." />
+														<label for="wr_file1"><span>파일선택</span></label>
+													</div>
+												</div>
+												<div class="FileStyle">
+													<input type="file" name="wr_file[]" id="wr_file2" />
+													<div class="file">
+														<input type="text" placeholder="첨부파일을 선택하세요." />
+														<label for="wr_file2"><span>파일선택</span></label>
+													</div>
 												</div>
 											</div>
 										</td>

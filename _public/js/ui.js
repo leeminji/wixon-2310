@@ -17,6 +17,60 @@ var UI = (function(){
             this.datepicker();
             this.fixedHeader();
             this.productList();
+
+            //스크롤 바로가기
+            $(".scrollTo").on('click', function(e){
+                var href = $(this).attr('href');
+                if( $(href).length == 0 ) return;
+                var top = $(href).offset().top;
+
+                $('html, body').animate({
+                    scrollTop : top
+                },500);
+            });
+        },
+        featureClass : function(_id){
+            var el = $("#"+_id);
+            var item = el.find(".FeatureClass__item");
+            var img = el.find(".FeatureClass__img");
+ 
+            return {
+                currentIndex : 0,
+                currentImg : null,
+                init : function(_currentIndex){
+                    var that = this;
+
+                    item.each(function(){
+                        $(this).on("click", function(e){
+                            e.preventDefault();
+                            var href = $(this).attr('href');
+                            that.img_on(href);
+                            that.item_on($(this));
+                        });
+                    });
+
+                    that.currentIndex = _currentIndex;
+                    that.on();
+                },
+
+                on : function(){
+                    var that = this;    
+                    item.removeClass("active");
+                    item.eq(this.currentIndex).addClass("active");                    
+                    
+                    img.removeClass("active");
+                    img.eq(this.currentIndex).addClass("active");
+                },
+                item_on : function(_this){                    
+                    item.removeClass("active");
+                    _this.addClass("active");
+                },
+                img_on : function(_id){
+                    var that = this;
+                    img.removeClass("active");
+                    $(_id).addClass("active");
+                }
+            }
         },
         productList : function(){
             var that = this;
@@ -32,44 +86,31 @@ var UI = (function(){
         productView : function(){
             var that = this;
 
+            //컨텐츠 위로 나타내기
+            $(".Layout__container").css('z-index', '10');
+
             //fixed
-            setTimeout(function(){
-                var product_quick = $(".ProductView__quick");
-                var quickTop = product_quick.offset().top;
-     
-                $(window).on("scroll", function(){
-                    var scrollTop = $(window).scrollTop();
-                    if( scrollTop > quickTop ) {
-                        product_quick.addClass("isFixed");
-                    }else{
-                        product_quick.removeClass("isFixed");
-                    }
-                });                
-            }, 1000);
+            var product_quick = $(".ProductView__quick");
+            var product_content = $(".ProductView__content");
+            var quickTop = product_content.offset().top;
+            var contentH = $(".ProductView__inner").height();
+            var footerTop = $(".Footer").offset().top;
 
-            //제품상세 소개
-            var productScroll = new Swiper('.ProductScroll', {
-                navigation: { 
-                    nextEl: '.swiper-button-next', 
-                    prevEl: '.swiper-button-prev' 
-                },
-                slidesPerView: 1,
-                spaceBetween: 32,
-                slidesPerGroup: 1,
-                loopFillGroupWithBlank: true,     
+            $(window).on("scroll", function(){
+                scrollEvent();
             });
+            $(window).on("load", function(){
+                scrollEvent();
+            });
+            function scrollEvent(){
+                var scrollTop = $('html, body').scrollTop();
+                if( scrollTop > quickTop ) {
+                    product_quick.addClass("isFixed");
+                }else{
+                    product_quick.removeClass("isFixed");
+                }
+            }
 
-            //리뷰
-            var reviewScroll = new Swiper('.ReviewScroll', {
-                navigation: { 
-                    nextEl: '.swiper-button-next', 
-                    prevEl: '.swiper-button-prev' 
-                },
-                slidesPerView: 1,
-                spaceBetween: 32,
-                slidesPerGroup: 1,
-                loopFillGroupWithBlank: true,    
-            });
         },
         main : function(){
             var swiper = new Swiper('#VisualArea', {
@@ -91,6 +132,20 @@ var UI = (function(){
                 },
                 effect : "fade"
             });
+
+			//메인비쥬얼
+			$('#MainVisual').slick({
+				dots: true,
+				infinite: true,
+				speed: 1000,
+				pause : 1000,
+				slidesToShow: 1,
+				fade: true,
+				autoplay : true,
+				arrows : false	
+			});
+
+            this.featureClass("FeatureClass").init(0);
         }, 
         datepicker : function(){
             $(".datepicker").datepicker();

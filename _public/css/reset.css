@@ -74,8 +74,9 @@
 	#skipToContent a:focus, #skipToContent a:active {display:block;top:0;width:100%;height:30px;line-height:30px;background:#555;color:#eee;}
 
 	/*form&input base style*/
-	input{height:3em;font-size:1em;line-height:1em;padding:0.5em;border:1px solid #d2d2d2;color:#555;background:#fff;border-radius: 0px;}
+	input{height:3em;font-size:1em;line-height:1em;padding:0.5em;border:1px solid #d2d2d2;color:#000000;background:#fff;border-radius: 0px;}
 	input[type='password']{font-family: 'Malgan Gothic', sans-serif;}
+	input[type='checkbox']{background:transparent}
 
 	input[size="100"]{width:100%}
 	input[size="90"]{width:90%}
@@ -86,6 +87,8 @@
 	input[size="15"]{width:15em}	
 	input[size="10"]{width:10em}
 	input[size="8"]{width:8em}
+	input[size="7"]{width:7em}
+	input[size="6"]{width:6em}
 	input[size="5"]{width:5em}
 	input[type="file"]{padding:0}
 	input::-webkit-input-placeholder { color: #666666;}
@@ -103,8 +106,8 @@
 		background-color: transparent !important;
 	}
 	
-	textarea{display:block;border:1px solid #e5e5e5;padding:.5em .3em}
-	textarea[size="100"]{width:99%}
+	textarea{display:block;border:1px solid #d2d2d2;padding:.5em .3em;box-sizing: border-box;}
+	textarea[size="100"]{width:100%}
 	select{font-size:1em;height:2em;line-height:1em;padding:0.5em;margin:0;border:1px solid #aaa;color:#666666;background:transparent;}
 	.ie8 select{height:1.8em}
 	select[width="5"]{width:5em}
@@ -148,6 +151,13 @@
 	.mt40{margin-top:4em;}
 	.mt50{margin-top:5em;}
 	.mt60{margin-top:6em;}
+
+	/* imgArea */
+	.imgArea.center{text-align: center;}
+	.imgArea.left{text-align: left;}
+	.imgArea.right{text-align: right;}
+	.imgArea img{max-width: 100%;}
+
 
 	/* ui-datepicker */
 	.ui-datepicker {position:absolute;z-index:100 !important;width:20em;padding: .5em;display: none;background:#fff;border:1px solid #ccc;box-shadow:1px 1px 15px #000}

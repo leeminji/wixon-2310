@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+	<title>Q&A - 고객센터 | 2310</title>
+	<?php include './include/head.html' ?>
+</head>
+
+<body>
+	<!-- skipToContent -->
+	<div id="skipToContent">
+		<a href="#Container">본문으로 바로가기</a>
+		<a href="#MainGnb">메뉴 바로가기</a>
+	</div>
+	<!-- //skipToContent -->
+
+	<div class="loading" id="loading">
+		<div class="img"><span class="skip">Loading...</span></div>
+	</div>
+	<div class="Layout__Allwrap" id="LayoutAllwrap">
+		<!-- Layout__header -->
+		<div class="Layout__header">
+			<?php include './include/header.html'; ?>
+		</div>
+		<!-- //Layout__header -->
+
+		<!-- Layout__container -->
+		<div class="Layout__container">
+			<div class="Container" id="Container">
+				<div class="SubContent">
+					<div class="Layout__section small">
+						<!-- 탭 -->
+						<div class="TabArea">
+							<div class="TabArea__item">
+								<a href="./8_1_list.html"><span>공지사항</span></a>
+							</div>
+							<div class="TabArea__item active">
+								<a href="./8_2_list.html"><span>Q&A</span></a>
+							</div>
+							<div class="TabArea__item">
+								<a href="./8_3.html"><span>FAQ</span></a>
+							</div>
+						</div>
+						<!-- 탭 -->
+						<div class="pt40"></div>
+						<h1 class="SubContent__title2 center"><span>Q&A</span></h1>
+						<div class="pt30"></div>
+						<div class="BoardWrite__basic">
+							<table>
+								<colgroup>
+									<col class="col_title">
+									<col class="col_content">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">제목</th>
+										<td><input required="" type="text" name="wr_subject" value="" size="100" placeholder="제목을 입력하세요."></td>
+									</tr>
+									<tr>
+										<th scope="row">내용</th>
+										<td><textarea name='wr_content' id='wr_content' rows='10' cols='80'></textarea></td>
+									</tr>
+									<tr>
+										<th scope="row">
+											<span>첨부파일</span>
+											<a href="#" class="icon small icon_add"><span class="skip">추가</span></a>
+										</th>
+										<td>
+											<div class="FileStyle__list">
+											<div class="FileStyle">
+												<input type="file" name="wr_file[]" id="wr_file1" />
+												<div class="file">
+													<input type="text" placeholder="첨부파일을 선택하세요." />
+													<label for="wr_file1"><span>파일선택</span></label>
+												</div>
+											</div>
+											<div class="FileStyle">
+												<input type="file" name="wr_file[]" id="wr_file2" />
+												<div class="file">
+													<input type="text" placeholder="첨부파일을 선택하세요." />
+													<label for="wr_file2"><span>파일선택</span></label>
+												</div>
+											</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="pt30"></div>
+						<div class="ButtonArea center">
+							<a href="" class="btn_basic white"><span>취소</span></a>
+							<span class="blank"></span>
+							<a href="./9_4.html" class="btn_basic"><span>등록</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<script type="text/javascript" src="./../_public/ckeditor/ckeditor.js"></script>
+			<script type='text/javascript'>
+				$(document).ready(function () {
+					var editor = null;
+					editor = CKEDITOR.replace('wr_content', {
+						language: 'ko',
+						height: 500,
+					});
+
+					//파일
+					var fileTarget = $("input[type='file']");
+					fileTarget.each(function () {
+						$(this).on('change', function () { // 값이 변경되면
+							var value = $(this).val();
+							$(this).parent().find("input[type='text']").val(value);
+						});
+					})
+				});
+			</script>
+
+		</div>
+		<!-- //Layout__container -->
+
+		<!-- Layout__footer -->
+		<div class="Layout__footer">
+			<?php include './include/footer.html'; ?>
+		</div>
+		<!-- //Layout__footer -->
+
+		<div class="Layout__fixed">
+			<a href="" class="link_talk"><span></span></a>
+		</div>
+	</div>
+</body>
+
+</html>

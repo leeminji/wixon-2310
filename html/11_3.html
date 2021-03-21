@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+	<title>주문/배송 - 마이페이지 | 2310</title>
+	<?php include './include/head.html' ?>
+</head>
+
+<body>
+	<!-- skipToContent -->
+	<div id="skipToContent">
+		<a href="#Container">본문으로 바로가기</a>
+		<a href="#MainGnb">메뉴 바로가기</a>
+	</div>
+	<!-- //skipToContent -->
+
+	<div class="loading" id="loading">
+		<div class="img"><span class="skip">Loading...</span></div>
+	</div>
+	<div class="Layout__Allwrap" id="LayoutAllwrap">
+		<!-- Layout__header -->
+		<div class="Layout__header">
+			<?php include './include/header.html'; ?>
+		</div>
+		<!-- //Layout__header -->
+
+		<!-- Layout__container -->
+		<div class="Layout__container">
+			<div class="Container" id="Container">
+
+				<div class="SubContent">
+					<div class="Layout__section small">
+						<!-- 탭 -->
+						<div class="TabArea col6">
+							<div class="TabArea__item">
+								<a href="./11_1.html"><span>장바구니</span></a>
+							</div>
+							<div class="TabArea__item">
+								<a href="./11_2.html"><span>위시리스트</span></a>
+							</div>
+							<div class="TabArea__item active">
+								<a href="./11_3.html"><span>주문/배송</span></a>
+							</div>
+							<div class="TabArea__item">
+								<a href="./11_4.html"><span>결제내역</span></a>
+							</div>
+							<div class="TabArea__item">
+								<a href="./11_5.html"><span>회원정보수정</span></a>
+							</div>
+							<div class="TabArea__item">
+								<a href="./11_6.html"><span>받은쪽지함</span></a>
+							</div>
+						</div>
+						<!-- 탭 -->
+						<div class="pt40"></div>
+						<h1 class="SubContent__title2 center"><span>주문/배송</span></h1>
+						<div class="pt20"></div>
+						<!-- 진행중 강좌 -->
+						<div class="BoardTable">
+							<div class="pt10"></div>
+							<div class="BoardTable__basic center">
+								<table>
+									<colgroup>
+										<col class="col_datetime" />
+										<col class="col_title" />
+										<col class="col_status" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">주문일 (구매번호)</th>
+											<th scope="col">주문일/구매번호</th>
+											<th scope="col">배송상태</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>2020-09-18(160877726)</td>
+											<td class="left"><a href="./9_4_view.html" class="link">2013반주법 > Worship Chord Voicing Basic 1 > 그사랑 ( 3개월)</a></td>
+											<td><div class="Status fin"><span>배송완료</span></div></td>
+										</tr>
+										<tr>
+											<td>2020-09-18(160877726)</td>
+											<td class="left"><a href="./9_4_view.html" class="link">2013반주법 > Worship Chord Voicing Basic 1 > 그사랑 ( 3개월)</a></td>
+											<td>
+												<div class="Status"><span>배송중</span></div>
+											</td>
+										</tr>
+										<!-- <tr>
+											<td colspan="3" class="empty">NO DATA</td>
+										</tr> -->
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="pt20"></div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //Layout__container -->
+
+		<!-- Layout__footer -->
+		<div class="Layout__footer">
+			<?php include './include/footer.html'; ?>
+		</div>
+		<!-- //Layout__footer -->
+
+		<div class="Layout__fixed">
+			<a href="" class="link_talk"><span></span></a>
+		</div>
+	</div>
+</body>
+
+</html>
